@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
+
+:root {
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web';
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to left, #4343ff, #86A8E7, #1268ca);
+    background-size: 200% 100%;
+    animation: degrade-animado 5s infinite alternate;
+}
+
+header {
+    background-color: rgb(14, 15, 33);
+    width: 100%;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 25%;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu {
+    width: 48%;
+}
+
+.menu nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-right: 30px;
+    font-size: 18px;
+    position: relative;
+}
+
+.menu nav a::after {
+    content: " ";
+    width: 0px;
+    height: 4px;
+    background-image: linear-gradient(45deg, #ff2500, #ff7100);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.menu nav a:hover::after {
+    width: 40px;
+}
+
+main {
+    margin: 0px auto; 
+}
+
+.presentation h2{
+    font-size: 40px;
+}
+
+.presentation h3 {
+    font-size: 30px;
+}
+
+.presentation h4{
+    font-size: 20px;
+}
+
+.box-degrade{
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.box-degrade h2, h3, h4, p {
+    color: white;
+}
+
+@keyframes degrade-animado {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+#thumb {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#userImage {
+    width: 200px;
+}
+
+#app {
+    max-width: 1024px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+#add-user-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.add-user-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-product-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.add-user-form input:focus {
+    outline: none;
+}
+
+.add-product-form input:focus {
+    outline: none;
+}
+
+.add-product-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-user-form.error input {
+    border-color: var(--error-color);
+}
+
+.add-user-form.success input {
+    border-color: var(--success-color);
+}
+
+.add-user-form small {
+    color: var(--error-color);
+}
+
+.add-product-form.error input {
+    border-color: var(--error-color);
+}
+
+.add-product-form.success input {
+    border-color: var(--success-color);
+}
+
+.add-product-form small {
+    color: var(--error-color);
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.space {
+    padding: 5px 0;
+}
+
+button.remove-btn {
+    width: 250px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.card button {
+    display: block;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.space {
+    padding: 5px 0;
+}
+
+strong {
+    color: #333;
+}
+
+button.remove-btn:hover {
+    background-color: #c9302c;
+}
+
+footer {
+    background-color: rgb(14, 15, 33);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
